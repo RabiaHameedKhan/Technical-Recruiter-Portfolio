@@ -1,0 +1,32 @@
+export const faqs = [
+  {
+    question: "What types of roles do you recruit for?",
+    answer:
+      "I focus on software engineering, product, design, QA, DevOps, cloud, data, and ML roles for remote and hybrid teams."
+  },
+  {
+    question: "How long does it take to get candidates?",
+    answer:
+      "For most well-scoped roles, I share the first shortlisted profiles within 3-5 business days after confirming the requirements."
+  },
+  {
+    question: "How does your commission work?",
+    answer:
+      "There is no upfront fee. My commission is payable only after you successfully hire a candidate I introduced."
+  },
+  {
+    question: "What if the candidate doesn't work out?",
+    answer:
+      "Replacement terms can be agreed before the search begins, depending on the role, location, seniority, and contract type."
+  },
+  {
+    question: "Do you work internationally?",
+    answer:
+      "Yes. I am based in Karachi and work remotely with companies hiring across Pakistan, the Middle East, Europe, North America, and global remote markets."
+  },
+  {
+    question: "Can I request multiple roles at once?",
+    answer:
+      "Yes. The intake form can cover the first priority role, and I will follow up to scope additional roles clearly."
+  }
+];
