@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="theme-purple section-padding pt-32">
+      <section className="theme-light section-padding pt-32">
         <div className="container-page">
           <SectionHeading eyebrow="Services" title="Technical Recruiting for Focused Hiring Teams" subtitle="I help companies define, source, screen, and shortlist candidates for technical roles across remote and hybrid markets." />
           <RolesGrid />
@@ -29,7 +29,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <section className="theme-purple section-padding">
+      <section className="theme-light section-padding">
         <div className="container-page">
           <SectionHeading title="Experience Levels" subtitle="Support for individual contributor and leadership roles, from early-career talent to experienced technical managers." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">

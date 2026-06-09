@@ -10,10 +10,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "border border-[#470047] bg-[#470047] px-6 py-3 text-white shadow-sm hover:bg-[#470047] hover:shadow-md",
-        outline: "border border-[#470047] bg-white px-6 py-3 text-[#470047] hover:bg-white",
-        ghost: "px-4 py-2 text-[#470047] hover:bg-white hover:text-[#470047]",
-        secondary: "border border-white bg-white px-6 py-3 text-[#470047] hover:bg-white"
+        default: "border border-[#4A0E4E] bg-[#4A0E4E] px-6 py-3 !text-[#F5F0FF] shadow-sm hover:border-[#6B1870] hover:bg-[#6B1870] active:border-[#3A0A3E] active:bg-[#3A0A3E]",
+        outline: "border border-[#4A0E4E] bg-transparent px-6 py-3 text-[#4A0E4E] hover:bg-[#4A0E4E] hover:text-[#F5F0FF]",
+        ghost: "px-4 py-2 text-[#4A0E4E] hover:bg-[#EDE5FF] hover:text-[#4A0E4E]",
+        secondary: "border border-[#F5F0FF] bg-[#F5F0FF] px-6 py-3 text-[#4A0E4E] shadow-sm hover:bg-[#EDE5FF]"
       },
       size: {
         default: "h-11",

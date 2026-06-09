@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export function SuccessState() {
   return (
     <div className="premium-card rounded-2xl p-8 text-center">
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#470047] text-white">
+      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#4A0E4E] text-[#F5F0FF]">
         <CheckCircle2 className="h-8 w-8" />
       </div>
       <h2 className="mt-6 font-serif text-3xl font-bold text-gray-950">Thank you! I&apos;ve received your hiring request.</h2>

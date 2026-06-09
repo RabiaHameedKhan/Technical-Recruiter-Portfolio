@@ -41,7 +41,7 @@ export function StatsSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="theme-purple section-padding">
+    <section className="theme-light section-padding">
       <div className="container-page grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <motion.div

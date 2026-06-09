@@ -30,10 +30,10 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <section className="theme-purple section-padding pt-32">
+      <section className="theme-light section-padding pt-32">
         <div className="container-page grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="premium-card relative mx-auto flex aspect-[4/5] w-full max-w-md items-center justify-center rounded-[2rem]">
-            <div className="flex h-36 w-36 items-center justify-center rounded-full bg-[#470047] font-serif text-5xl font-bold text-white shadow-lg">AK</div>
+            <div className="flex h-36 w-36 items-center justify-center rounded-full bg-[#4A0E4E] font-serif text-5xl font-bold text-[#F5F0FF] shadow-lg">AK</div>
           </div>
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-violet-600">About Me</p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {values.map((item) => (
               <article key={item.title} className="premium-card rounded-2xl p-6">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#470047] text-white">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4A0E4E] text-[#F5F0FF]">
                   <item.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-950">{item.title}</h3>
@@ -71,7 +71,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="theme-purple section-padding">
+      <section className="theme-light section-padding">
         <div className="container-page grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeading centered={false} title="Background & Skills" subtitle="A practical mix of technical recruiting experience, sourcing systems, and remote hiring fluency." />
           <div className="space-y-6">
@@ -82,7 +82,7 @@ export default function AboutPage() {
               "Comfortable supporting remote-first hiring across Pakistan, MENA, Europe, North America, and global distributed teams."
             ].map((item) => (
               <div key={item} className="premium-card flex gap-4 rounded-2xl p-5">
-                <Award className="mt-1 h-5 w-5 shrink-0 text-[#470047]" />
+                <Award className="mt-1 h-5 w-5 shrink-0 text-[#4A0E4E]" />
                 <p className="leading-7 text-gray-600">{item}</p>
               </div>
             ))}

@@ -22,14 +22,14 @@ const steps = [
 export default function HowItWorksPage() {
   return (
     <>
-      <section className="theme-purple section-padding pt-32">
+      <section className="theme-light section-padding pt-32">
         <div className="container-page">
           <SectionHeading eyebrow="How It Works" title="A Clear Process From Requirement to Hire" subtitle="Direct recruiting support without agency complexity, designed to protect your time and improve shortlist quality." />
           <div className="mx-auto mt-16 max-w-4xl">
             {steps.map((step, index) => (
               <div key={step.title} className="relative grid gap-5 pb-10 md:grid-cols-[80px_1fr]">
-                {index !== steps.length - 1 ? <div className="absolute left-9 top-16 hidden h-full w-px bg-white/30 md:block" /> : null}
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-[#470047] text-white shadow-sm">
+                {index !== steps.length - 1 ? <div className="absolute left-9 top-16 hidden h-full w-px bg-[#EDE5FF] md:block" /> : null}
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#F5F0FF] bg-[#4A0E4E] text-[#F5F0FF] shadow-sm">
                   <step.icon className="h-7 w-7" />
                 </div>
                 <div className="premium-card rounded-2xl p-6">

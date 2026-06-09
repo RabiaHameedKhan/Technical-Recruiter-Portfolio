@@ -67,7 +67,7 @@ function Field({
       <Label htmlFor={id}>{label}</Label>
       {child}
       {error ? (
-        <p id={errorId} className="text-sm font-medium text-[#470047]">
+        <p id={errorId} className="text-sm font-medium text-[#4A0E4E]">
           {error}
         </p>
       ) : null}
@@ -224,7 +224,7 @@ export function HireForm() {
         </Field>
       </FormSection>
 
-      {serverError ? <p className="rounded-2xl border border-[#470047] bg-white p-4 text-sm font-medium text-[#470047]">{serverError}</p> : null}
+      {serverError ? <p className="rounded-2xl border border-[#4A0E4E] bg-[#FFFFFF] p-4 text-sm font-medium text-[#4A0E4E]">{serverError}</p> : null}
       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
         {isSubmitting ? "Submitting..." : "Submit Hiring Request"}

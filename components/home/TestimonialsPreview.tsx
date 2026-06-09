@@ -6,7 +6,7 @@ import { testimonials } from "@/data/testimonials";
 
 export function TestimonialsPreview() {
   return (
-    <section className="theme-purple section-padding">
+    <section className="theme-light section-padding">
       <div className="container-page">
         <SectionHeading title="What Employers Say" subtitle="A few words from teams that needed practical, personal help with technical hiring." />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">

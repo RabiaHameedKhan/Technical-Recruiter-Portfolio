@@ -29,7 +29,7 @@ export function HowItWorksPreview() {
               transition={{ duration: 0.45, delay: index * 0.06 }}
               className="premium-card rounded-2xl p-6"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#470047] text-lg font-bold text-white">{index + 1}</div>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#4A0E4E] text-lg font-bold text-[#F5F0FF]">{index + 1}</div>
               <h3 className="text-lg font-bold text-gray-950">{title}</h3>
               <p className="mt-3 text-sm leading-6 text-gray-600">{description}</p>
             </motion.article>

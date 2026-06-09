@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="theme-purple section-padding pt-32">
+    <section className="theme-light section-padding pt-32">
       <div className="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-violet-600">Contact</p>

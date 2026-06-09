@@ -14,7 +14,7 @@ export function RoleCard({ title, stack, icon: Icon }: { title: string; stack: s
       transition={{ duration: 0.45 }}
       className="premium-card group rounded-2xl p-6 transition-all duration-200 hover:shadow-md"
     >
-      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#470047] text-white">
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4A0E4E] text-[#F5F0FF]">
         <Icon className="h-6 w-6" />
       </div>
       <h3 className="text-lg font-bold text-gray-950">{title}</h3>

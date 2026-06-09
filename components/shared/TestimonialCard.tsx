@@ -30,9 +30,9 @@ export function TestimonialCard({
         featured && "md:col-span-2"
       )}
     >
-      <Quote className="mb-5 h-9 w-9 text-[#470047]" />
+      <Quote className="mb-5 h-9 w-9 text-[#4A0E4E]" />
       <p className="text-base leading-7 text-gray-700">{quote}</p>
-      <div className="mt-5 flex gap-1 text-[#470047]" aria-label="5 star rating">
+      <div className="mt-5 flex gap-1 text-[#4A0E4E]" aria-label="5 star rating">
         {Array.from({ length: 5 }).map((_, index) => (
           <Star key={index} className="h-4 w-4 fill-current" />
         ))}

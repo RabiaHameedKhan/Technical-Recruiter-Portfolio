@@ -29,21 +29,21 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed left-0 right-0 top-0 z-50 border-b border-white/20 bg-[#470047]/95 transition-all duration-200",
-        scrolled && "border-white/30 shadow-sm backdrop-blur-xl"
+        "fixed left-0 right-0 top-0 z-50 border-b border-[#EDE5FF] bg-[#FFFFFF]/95 shadow-sm backdrop-blur-2xl transition-all duration-200",
+        scrolled && "bg-[#F5F0FF]/95 shadow-md"
       )}
     >
       <nav className="container-page flex min-h-20 items-center justify-between">
-        <Link href="/" className="font-serif text-lg font-bold text-white" onClick={() => setOpen(false)}>
-          Amna Khan <span className="hidden text-white/80 sm:inline">- Technical Recruiter</span>
+        <Link href="/" className="font-serif text-lg font-bold text-[#4A0E4E]" onClick={() => setOpen(false)}>
+          Amna Khan <span className="hidden text-[#4A0E4E]/75 sm:inline">- Technical Recruiter</span>
         </Link>
         <div className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-white/85 transition-colors hover:text-white">
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-[#4A0E4E]/75 transition-colors hover:text-[#4A0E4E]">
               {link.label}
             </Link>
           ))}
-          <Button asChild variant="secondary">
+          <Button asChild variant="outline">
             <Link href="/hire">Hire Through Me</Link>
           </Button>
         </div>
@@ -51,25 +51,25 @@ export function Navbar() {
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/35 text-white lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#4A0E4E] bg-transparent text-[#4A0E4E] shadow-sm backdrop-blur-xl lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
       {open ? (
-        <div className="border-t border-white/25 bg-[#470047] px-6 py-5 shadow-sm lg:hidden">
+        <div className="border-t border-[#EDE5FF] bg-[#FFFFFF]/95 px-6 py-5 shadow-sm backdrop-blur-2xl lg:hidden">
           <div className="mx-auto flex max-w-[1200px] flex-col gap-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-2 py-3 text-base font-medium text-white/85 hover:bg-white hover:text-[#470047]"
+                className="rounded-xl px-2 py-3 text-base font-medium text-[#4A0E4E]/80 hover:bg-[#EDE5FF] hover:text-[#4A0E4E]"
               >
                 {link.label}
               </Link>
             ))}
-            <Button asChild variant="secondary" className="mt-2 w-full">
+            <Button asChild variant="outline" className="mt-2 w-full">
               <Link href="/hire" onClick={() => setOpen(false)}>
                 Hire Through Me
               </Link>
