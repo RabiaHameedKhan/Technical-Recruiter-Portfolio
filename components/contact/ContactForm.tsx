@@ -35,7 +35,7 @@ export function ContactForm() {
       setServerError(result.error || "Something went wrong. Please try again.");
       return;
     }
-    toast({ title: "Message sent", description: "Thanks, I'll reply as soon as I can." });
+    toast({ title: "Message sent", description: "Thanks, our team will reply as soon as we can." });
     reset();
   }
 
@@ -45,19 +45,19 @@ export function ContactForm() {
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
           <Input id="name" aria-invalid={!!errors.name} {...register("name")} />
-          {errors.name ? <p className="text-sm font-medium text-[#4A0E4E]">{errors.name.message}</p> : null}
+          {errors.name ? <p className="text-sm font-medium text-violet-700">{errors.name.message}</p> : null}
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" aria-invalid={!!errors.email} {...register("email")} />
-          {errors.email ? <p className="text-sm font-medium text-[#4A0E4E]">{errors.email.message}</p> : null}
+          {errors.email ? <p className="text-sm font-medium text-violet-700">{errors.email.message}</p> : null}
         </div>
         <div className="space-y-2">
           <Label htmlFor="message">Message</Label>
           <Textarea id="message" aria-invalid={!!errors.message} {...register("message")} />
-          {errors.message ? <p className="text-sm font-medium text-[#4A0E4E]">{errors.message.message}</p> : null}
+          {errors.message ? <p className="text-sm font-medium text-violet-700">{errors.message.message}</p> : null}
         </div>
-        {serverError ? <p className="rounded-xl border border-[#4A0E4E] bg-[#FFFFFF] p-3 text-sm font-medium text-[#4A0E4E]">{serverError}</p> : null}
+        {serverError ? <p className="rounded-xl border border-primary bg-white p-3 text-sm font-medium text-violet-700">{serverError}</p> : null}
         <Button type="submit" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
           {isSubmitting ? "Sending..." : "Send Message"}

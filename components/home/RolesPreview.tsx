@@ -1,12 +1,12 @@
-import { RolesGrid } from "@/components/shared/RolesGrid";
+import { ClosedPositionsGrid } from "@/components/shared/ClosedPositionsGrid";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 export function RolesPreview() {
   return (
     <section className="theme-light section-padding">
       <div className="container-page">
-        <SectionHeading title="Roles I Specialize In" subtitle="Technical hiring support across engineering, product, design, data, and cloud roles." />
-        <RolesGrid />
+        <SectionHeading title="Positions We've Successfully Closed" subtitle="Recent hires across technical, commercial, operations, and customer-facing teams." />
+        <ClosedPositionsGrid />
       </div>
     </section>
   );

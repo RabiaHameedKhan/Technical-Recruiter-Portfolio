@@ -6,7 +6,7 @@ export const hireFormSchema = z
   employerTitle: z.string().min(2, "Please enter your job title."),
   companyName: z.string().min(2, "Please enter your company name."),
   companyWebsite: z.string().url("Please enter a valid URL.").optional().or(z.literal("")),
-  workEmail: z.string().email("Please enter a valid work email."),
+  workEmail: z.string().email("Please enter a valid email address."),
   phone: z.string().optional(),
   country: z.string().min(2, "Please enter your country or location."),
   jobTitle: z.string().min(2, "Please enter the position title."),
@@ -19,11 +19,10 @@ export const hireFormSchema = z
   techStack: z.string().min(10, "Please describe required skills."),
   salaryRange: z.string().optional(),
   hiringDeadline: z.string().min(1, "Please select a hiring deadline."),
-  jobDescription: z.string().min(50, "Please add at least 50 characters."),
+  jobDescription: z.string().optional(),
   idealCandidate: z.string().optional(),
-  interviewProcess: z.string().optional(),
   additionalDetails: z.string().optional(),
-  source: z.string().min(1, "Please select how you found me."),
+  source: z.string().min(1, "Please select how you found us."),
     formType: z.literal("hire").default("hire")
   })
   .superRefine((data, ctx) => {

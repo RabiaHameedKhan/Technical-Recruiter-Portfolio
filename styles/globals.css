@@ -3,30 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: 260 100% 97%;
+  --background: 0 0% 100%;
   --foreground: 0 0% 10%;
   --card: 0 0% 100%;
   --card-foreground: 0 0% 10%;
-  --primary: 296 69% 18%;
-  --primary-foreground: 260 100% 97%;
-  --secondary: 260 100% 95%;
-  --secondary-foreground: 296 69% 18%;
-  --muted: 260 100% 95%;
+  --primary: 180 69% 37%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 180 69% 94%;
+  --secondary-foreground: 180 69% 22%;
+  --muted: 180 69% 94%;
   --muted-foreground: 0 0% 10%;
-  --accent: 296 65% 27%;
-  --accent-foreground: 260 100% 97%;
-  --destructive: 296 69% 18%;
-  --destructive-foreground: 260 100% 97%;
-  --border: 260 100% 95%;
-  --input: 260 100% 95%;
-  --ring: 296 69% 18%;
+  --accent: 180 69% 37%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 180 40% 83%;
+  --input: 180 40% 83%;
+  --ring: 180 69% 37%;
   --radius: 1rem;
-  --plum: #4A0E4E;
-  --plum-light: #6B1870;
-  --plum-dark: #3A0A3E;
-  --lavender: #F5F0FF;
-  --lavender-deep: #EDE5FF;
-  --white: #FFFFFF;
+  --brand-teal: #1EA1A1;
+  --brand-teal-dark: #137474;
+  --brand-teal-soft: #E7F8F8;
+  --brand-white: #FFFFFF;
   --text: #1a1a1a;
 }
 
@@ -40,49 +38,54 @@ html {
 
 body {
   color: var(--text);
-  background: var(--lavender);
+  background: var(--brand-white);
 }
 
 ::selection {
-  background: var(--plum);
-  color: var(--lavender);
+  background: var(--brand-teal);
+  color: var(--brand-white);
 }
 
 .bg-white {
-  background-color: var(--white);
+  background-color: var(--brand-white);
 }
 
 .bg-gray-50 {
-  background-color: var(--lavender);
+  background-color: var(--brand-teal-soft);
 }
 
 .border-gray-100 {
-  border-color: var(--lavender-deep);
+  border-color: hsl(var(--border));
 }
 
 .shadow-sm {
-  box-shadow: 0 14px 40px rgba(58, 10, 62, 0.08);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
 }
 
 .shadow-md {
-  box-shadow: 0 24px 70px rgba(58, 10, 62, 0.14);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
 }
 
-.theme-purple {
-  background: var(--plum);
-  color: var(--lavender);
+.theme-brand {
+  background: var(--brand-teal);
+  color: var(--brand-white);
 }
 
-.theme-purple :is(.text-gray-950, .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500, .text-gray-400, .text-gray-300, .text-violet-900, .text-violet-800, .text-violet-700, .text-violet-600, .text-violet-500, .text-violet-400, .text-violet-300, .text-violet-200, .text-violet-100) {
-  color: var(--lavender);
+.theme-brand :is(.text-gray-950, .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500, .text-gray-400, .text-gray-300, .text-violet-900, .text-violet-800, .text-violet-700, .text-violet-600, .text-violet-500, .text-violet-400, .text-violet-300, .text-violet-200, .text-violet-100) {
+  color: var(--brand-white);
 }
 
-.theme-purple :is(.border-gray-100, .border-gray-200, .border-violet-100, .border-violet-200, .border-violet-300) {
-  border-color: rgba(245, 240, 255, 0.24);
+.theme-brand :is(.border-gray-100, .border-gray-200, .border-violet-100, .border-violet-200, .border-violet-300) {
+  border-color: rgba(255, 255, 255, 0.32);
 }
 
 .theme-light {
-  background: var(--lavender);
+  background: var(--brand-teal-soft);
+  color: var(--text);
+}
+
+.theme-white {
+  background: var(--brand-white);
   color: var(--text);
 }
 
@@ -92,7 +95,7 @@ body {
 .text-violet-800,
 .text-violet-900,
 .text-violet-950 {
-  color: var(--plum);
+  color: var(--brand-teal);
 }
 
 .text-gray-950,
@@ -121,21 +124,21 @@ body {
 }
 
 .premium-card {
-  background: var(--white);
-  border: 1px solid var(--lavender-deep);
+  background: var(--brand-white);
+  border: 1px solid hsl(var(--border));
   color: var(--text);
-  box-shadow: 0 22px 70px rgba(58, 10, 62, 0.1);
+  box-shadow: 0 22px 70px rgba(30, 161, 161, 0.14);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .premium-card:hover {
-  border-color: var(--plum);
+  border-color: var(--brand-teal);
 }
 
-.theme-purple .premium-card {
-  background: var(--white);
+.theme-brand .premium-card {
+  background: var(--brand-white);
   color: var(--text);
-  border-color: var(--white);
+  border-color: var(--brand-white);
 }
 
 .premium-card :is(.text-gray-950, .text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500, .text-violet-900, .text-violet-800, .text-violet-700, .text-violet-600) {
@@ -144,13 +147,13 @@ body {
 
 .theme-light :is(h1, h2),
 .premium-card :is(h2, h3) {
-  color: var(--plum);
+  color: var(--brand-teal-dark);
 }
 
 .premium-chip {
-  background: var(--lavender-deep);
-  color: var(--plum);
-  border: 1px solid var(--lavender-deep);
+  background: var(--brand-teal-soft);
+  color: var(--brand-teal-dark);
+  border: 1px solid hsl(var(--border));
 }
 
 .container-page {

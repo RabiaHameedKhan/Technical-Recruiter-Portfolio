@@ -1,9 +1,9 @@
 import type { ContactFormValues } from "@/lib/validations/contactFormSchema";
 import type { HireFormValues } from "@/lib/validations/hireFormSchema";
 
-const recruiterName = "Amna Khan";
-const recruiterEmail = "amna@example.com";
-const linkedIn = "https://linkedin.com/in/amnakhan";
+const recruiterName = "NextHire Team";
+const recruiterEmail = "hello@nexthire.com";
+const linkedIn = "https://linkedin.com/company/nexthire";
 
 function escapeHtml(value?: string | number) {
   return String(value || "Not provided")
@@ -45,12 +45,10 @@ export function hiringRequestEmail(data: HireFormValues) {
       <p>${escapeHtml(data.jobDescription)}</p>
       <h2>--- IDEAL CANDIDATE ---</h2>
       <p>${escapeHtml(data.idealCandidate)}</p>
-      <h2>--- INTERVIEW PROCESS ---</h2>
-      <p>${escapeHtml(data.interviewProcess)}</p>
       <h2>--- ADDITIONAL NOTES ---</h2>
       <p>${escapeHtml(data.additionalDetails)}</p>
       <h2>--- SOURCE ---</h2>
-      ${line("How they found you", data.source)}
+      ${line("How they found NextHire", data.source)}
     </div>
   `;
 }
@@ -59,8 +57,8 @@ export function hiringAutoReply(data: HireFormValues) {
   return `
     <div style="font-family: Arial, sans-serif; color: #111827; line-height: 1.6;">
       <p>Hi ${escapeHtml(data.fullName)},</p>
-      <p>Thank you for sending your hiring request for ${escapeHtml(data.jobTitle)}. I've received the details and will review them carefully.</p>
-      <p>I'll be in touch within 24 hours to confirm scope, timeline, and next steps.</p>
+      <p>Thank you for sending your hiring request for ${escapeHtml(data.jobTitle)}. Our team has received the details and will review them carefully.</p>
+      <p>We will be in touch within 24 hours to confirm scope, timeline, and next steps.</p>
       <p>Warmly,<br />${recruiterName}<br /><a href="mailto:${recruiterEmail}">${recruiterEmail}</a><br /><a href="${linkedIn}">${linkedIn}</a></p>
     </div>
   `;

@@ -35,7 +35,6 @@ const defaultValues: HireFormValues = {
   hiringDeadline: "",
   jobDescription: "",
   idealCandidate: "",
-  interviewProcess: "",
   additionalDetails: "",
   source: "",
   formType: "hire"
@@ -67,7 +66,7 @@ function Field({
       <Label htmlFor={id}>{label}</Label>
       {child}
       {error ? (
-        <p id={errorId} className="text-sm font-medium text-[#4A0E4E]">
+        <p id={errorId} className="text-sm font-medium text-violet-700">
           {error}
         </p>
       ) : null}
@@ -137,7 +136,7 @@ export function HireForm() {
     }
     toast({
       title: "Hiring request submitted",
-      description: "Thank you! I'll be in touch within 24 hours."
+      description: "Thank you! Our team will be in touch within 24 hours."
     });
     setSubmitted(true);
   }
@@ -146,7 +145,7 @@ export function HireForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
-      <FormSection title="Your Details" description="Tell me who you are and where I can follow up.">
+      <FormSection title="Your Details" description="Tell us who you are and where our team can follow up.">
         <Field label="Your Full Name" error={errors.fullName?.message}>
           <Input aria-invalid={!!errors.fullName} {...register("fullName")} />
         </Field>
@@ -159,7 +158,7 @@ export function HireForm() {
         <Field label="Company Website" error={errors.companyWebsite?.message}>
           <Input type="url" placeholder="https://example.com" aria-invalid={!!errors.companyWebsite} {...register("companyWebsite")} />
         </Field>
-        <Field label="Work Email" error={errors.workEmail?.message}>
+        <Field label="Email" error={errors.workEmail?.message}>
           <Input type="email" aria-invalid={!!errors.workEmail} {...register("workEmail")} />
         </Field>
         <Field label="Phone / WhatsApp" error={errors.phone?.message}>
@@ -170,7 +169,7 @@ export function HireForm() {
         </Field>
       </FormSection>
 
-      <FormSection title="The Role You're Hiring For" description="Share the core role information so I can qualify candidates accurately.">
+      <FormSection title="The Role You're Hiring For" description="Share the core role information so we can qualify candidates accurately.">
         <Field label="Job Title / Position" error={errors.jobTitle?.message}>
           <Input aria-invalid={!!errors.jobTitle} {...register("jobTitle")} />
         </Field>
@@ -203,28 +202,25 @@ export function HireForm() {
         </Field>
       </FormSection>
 
-      <FormSection title="Role Details" description="A bit more context helps me screen for stronger fit.">
+      <FormSection title="Role Details" description="A bit more context helps us screen for stronger fit.">
         <Field label="Job Description / Responsibilities" error={errors.jobDescription?.message} className="md:col-span-2">
           <Textarea className="min-h-40" aria-invalid={!!errors.jobDescription} {...register("jobDescription")} />
         </Field>
         <Field label="Ideal Candidate Profile" error={errors.idealCandidate?.message} className="md:col-span-2">
           <Textarea placeholder="Personality, team fit, soft skills" {...register("idealCandidate")} />
         </Field>
-        <Field label="Interview Process" error={errors.interviewProcess?.message} className="md:col-span-2">
-          <Textarea placeholder="Rounds, format, stakeholders" {...register("interviewProcess")} />
-        </Field>
         <Field label="Any Other Details" error={errors.additionalDetails?.message} className="md:col-span-2">
           <Textarea {...register("additionalDetails")} />
         </Field>
       </FormSection>
 
-      <FormSection title="How Did You Find Me?">
-        <Field label="How did you hear about me?" error={errors.source?.message} className="md:col-span-2">
+      <FormSection title="How Did You Find Us?">
+        <Field label="How did you hear about us?" error={errors.source?.message} className="md:col-span-2">
           <SelectField control={control} name="source" placeholder="Select source" items={["LinkedIn", "Referral", "Google", "Other"]} />
         </Field>
       </FormSection>
 
-      {serverError ? <p className="rounded-2xl border border-[#4A0E4E] bg-[#FFFFFF] p-4 text-sm font-medium text-[#4A0E4E]">{serverError}</p> : null}
+      {serverError ? <p className="rounded-2xl border border-primary bg-white p-4 text-sm font-medium text-violet-700">{serverError}</p> : null}
       <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
         {isSubmitting ? "Submitting..." : "Submit Hiring Request"}

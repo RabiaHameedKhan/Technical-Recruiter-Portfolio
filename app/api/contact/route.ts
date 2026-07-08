@@ -57,7 +57,7 @@ export async function POST(request: Request) {
       await transporter.sendMail({
         from,
         to: data.workEmail,
-        subject: "We've received your hiring request - Amna Khan",
+        subject: "We've received your hiring request - NextHire",
         html: hiringAutoReply(data)
       });
 

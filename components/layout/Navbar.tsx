@@ -9,9 +9,12 @@ import { cn } from "@/lib/utils";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/how-it-works", label: "How It Works" },
+  { href: "/how-it-works", label: "How It Works" }
+];
+
+const secondaryLinks = [
   { href: "/services", label: "Services" },
-  { href: "/testimonials", label: "Testimonials" },
+  { href: "/job-seekers", label: "Job Seekers" },
   { href: "/contact", label: "Contact" }
 ];
 
@@ -29,49 +32,72 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed left-0 right-0 top-0 z-50 border-b border-[#EDE5FF] bg-[#FFFFFF]/95 shadow-sm backdrop-blur-2xl transition-all duration-200",
-        scrolled && "bg-[#F5F0FF]/95 shadow-md"
+        "fixed left-0 right-0 top-0 z-50 border-b border-primary/20 bg-white/95 shadow-sm backdrop-blur-2xl transition-all duration-200",
+        scrolled && "shadow-md"
       )}
     >
-      <nav className="container-page flex min-h-20 items-center justify-between">
-        <Link href="/" className="font-serif text-lg font-bold text-[#4A0E4E]" onClick={() => setOpen(false)}>
-          Amna Khan <span className="hidden text-[#4A0E4E]/75 sm:inline">- Technical Recruiter</span>
+      <nav className="container-page flex min-h-20 items-center justify-between gap-5">
+        <Link href="/" className="font-serif text-2xl font-bold text-primary md:text-3xl" onClick={() => setOpen(false)}>
+          NextHire
         </Link>
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-[#4A0E4E]/75 transition-colors hover:text-[#4A0E4E]">
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-gray-700 transition-colors hover:text-primary">
+              {link.label}
+            </Link>
+          ))}
+          {secondaryLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-gray-700 transition-colors hover:text-primary">
               {link.label}
             </Link>
           ))}
           <Button asChild variant="outline">
-            <Link href="/hire">Hire Through Me</Link>
+            <Link href="/job-seekers">Apply for Jobs</Link>
+          </Button>
+          <Button asChild>
+            <Link href="/hire">Request Candidate</Link>
           </Button>
         </div>
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-[#4A0E4E] bg-transparent text-[#4A0E4E] shadow-sm backdrop-blur-xl lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-primary bg-white text-primary shadow-sm backdrop-blur-xl lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
       {open ? (
-        <div className="border-t border-[#EDE5FF] bg-[#FFFFFF]/95 px-6 py-5 shadow-sm backdrop-blur-2xl lg:hidden">
+        <div className="border-t border-primary/20 bg-white/95 px-6 py-5 shadow-sm backdrop-blur-2xl lg:hidden">
           <div className="mx-auto flex max-w-[1200px] flex-col gap-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-2 py-3 text-base font-medium text-[#4A0E4E]/80 hover:bg-[#EDE5FF] hover:text-[#4A0E4E]"
+                className="rounded-xl px-2 py-3 text-base font-medium text-gray-700 hover:bg-primary hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+            {secondaryLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-xl px-2 py-3 text-base font-medium text-gray-700 hover:bg-primary hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
             <Button asChild variant="outline" className="mt-2 w-full">
+              <Link href="/job-seekers" onClick={() => setOpen(false)}>
+                Apply for Jobs
+              </Link>
+            </Button>
+            <Button asChild className="w-full">
               <Link href="/hire" onClick={() => setOpen(false)}>
-                Hire Through Me
+                Request Candidate
               </Link>
             </Button>
           </div>

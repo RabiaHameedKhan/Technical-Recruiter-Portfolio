@@ -19,11 +19,21 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Amna Khan | Technical Recruiter",
-    template: "%s | Amna Khan"
+    default: "NextHire",
+    template: "%s | NextHire"
   },
   description:
-    "Personal technical recruiting for remote-first companies seeking pre-screened software engineers and tech professionals."
+    "NextHire connects employers and candidates with focused recruiting support. Your Next Great Hire. Your Next Great Job.",
+  openGraph: {
+    title: "NextHire",
+    description: "Your Next Great Hire. Your Next Great Job.",
+    siteName: "NextHire",
+    type: "website"
+  },
+  applicationName: "NextHire",
+  appleWebApp: {
+    title: "NextHire"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

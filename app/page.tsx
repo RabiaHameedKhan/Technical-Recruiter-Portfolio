@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { HowItWorksPreview } from "@/components/home/HowItWorksPreview";
 import { RolesPreview } from "@/components/home/RolesPreview";
 import { StatsSection } from "@/components/home/StatsSection";
-import { TestimonialsPreview } from "@/components/home/TestimonialsPreview";
 import { TrustBar } from "@/components/home/TrustBar";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <StatsSection />
       <HowItWorksPreview />
       <RolesPreview />
-      <TestimonialsPreview />
       <CTABanner />
     </>
   );
